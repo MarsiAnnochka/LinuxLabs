@@ -1,0 +1,122 @@
+   45  whoami
+   46  whoaim
+   47  whoami
+   48  echo "Hello World"
+   49  date
+   50  cal
+   51  man cal
+   52  cal -3
+   53  history
+   54  clear
+   55  pwd
+   56  cd /
+   57  cd ..
+   58  pwd
+   59  ls
+   60  ls /var
+   61  cd 
+   62  cd ..
+   63  pwd
+   64  ls
+   65  man ls
+   66  cd
+   67  ls -l
+   68  mkdir fruits
+   69  cd /
+   70  mkdir ~/animals
+   71  touch /tmp/temp
+   72  cd ~/fruits
+   73  touch apple banana
+   74  touch pineaple lion
+   75  touch ../animals/cat.txt
+   76  touch ../animals/dog.txt
+   77  touch ../animals/elephant.txt
+   78  ls ../animals -l
+   79  ls b*
+   80  ls *a
+   81  ls [bi]*
+   82  ls b* i*
+   83  cp /etc/passwd ~
+   84  cat /etc/issue
+   85  man cp
+   86  cp /etc/issue apple -f
+   87  cat apple
+   88  mv lion ../animals
+   89  ls ../animals
+   90  mv pineaple pineapple
+   91  ls
+   92  man wc
+   93  wc /etc/passwd -l
+   94  cd ~
+   95  ln -s /etc/passwd passwd_link
+   96  ln .bash_history history_hard
+   97  ls -l ~/.bash_history
+   98  ls -l
+   99  rm fruits/apple
+  100  mkdir rmme
+  101  rmdir rmme
+  102  rmdir fruits
+  103  rm -fr fruits
+  104  cat /etc/passwd
+  105  cat /etc/passwd /var/log
+  106  cat /etc/passwd /var/log/boot.log
+  107  cp /etc/init.d/ ~
+  108  cp -r /etc/init.d/ ~
+  109  rm -fr init.d
+  110  cut -d: -f1 /etc/passwd | sort
+  111  cut /etc/passwd
+  112  man cut
+  113  man column
+  114  man less
+  115  cut -d: -f1,3,4 /etc/passwd | column -ts: | less
+  116  cat /etc/passwd
+  117  cut -d: -f1,3 /etc/passwd | column -ts: | less
+  118  grep :/bin/bash /etc/passwd | wc -l
+  119  man grep
+  120  grep :/bin/bash /etc/passwd | cut -d: -f1,3 | sort -rn
+  121  grep :/bin/bash /etc/passwd | cut -d: -f1 | sort -rn
+  122  man top
+  123  man head
+  124  rpm -qa --qf '%{NAME}: %{SIZE}\n' | sort -rn -k2,2 | head -n25
+  125  rpm -ql man-db | xargs -l du    2> /dev/null  | sort -n
+  126  top -b -n1 | sort
+  127  man sort
+  128  top -b -n1 | sort -i
+  129  man sort
+  130  top -b -n1 | sort -k2
+  131  top -b -n1 | tail -n+8 | cut -c7-  | tr -s ' ' '\t' | cut -f11,5
+  132  sort /etc/passwd | tr ":" " "
+  133  sort /etc/passwd | cut -f1,5
+  134  tail -n+8 | cut -c7-  | tr -s ' ' '\t' | cut -d: f1,5 /etc/passwd | sort
+  135  history
+  136  cut -d: -f1,5 /etc/passwd | tail -n+8 | cut -c7-  | tr -s ' ' '\t'
+  137  cut -d: -f1,5 /etc/passwd | tail -n+8 | sort
+  138  cut -d: -f1,4 /etc/passwd | tail -n+8 | sort
+  139  cat /etc/passwd
+  140  cut -d: -f1,7 /etc/passwd | tail -n+8 | sort
+  141  cut -d: -f1,7 /etc/passwd | tail -n+8 | sort | tr ":" " "
+  142  cat user-manual.txt
+  143  cat for_edit.txt
+  144  cat for_edit
+  145  cat for_edit | tr ' ' '\012' 
+  146  cat for_edit | tr ' ' '\012' | tr '[:upper:]' '[:lower:]'
+  147  cat for_edit | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' 
+  148  cat for_edit | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]'
+  149  cat for_edit | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c
+  150  cat for_edit | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c | sort
+  151  cat for_edit  | tr -cs '[:alpha:]' '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -rn | head -5
+  152  cat for_edit | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c | sort | head -5
+  153  tr '[:lower:]' '[:upper:]' < for_edit |  tr -d '[:punct:] \n\t' | fold -w1 | sort | uniq -c | sort -rn | head -5
+  154  tr -cs '[:alpha:]' '\n' < user-manual.txt | less | grep -E ........ | sort | uniq -c | sort -rn | head
+  155  tr -cs '[:alpha:]' '\n' < for_edit | less | grep -E ........ | sort | uniq -c | sort -rn | head
+  156  ping ya.ru
+  157  curl wttr.in
+  158  hostname -I
+  159  curl ifconfig.me
+  160  https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README-ru.md | less
+  161  wget https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README-ru.md | less
+  162  cat README-ru.md | less
+  163  sudo id
+  164  sudo less /var/log/messages
+  165  cat /var/log/messages
+  166  history > lab1_history.txt
