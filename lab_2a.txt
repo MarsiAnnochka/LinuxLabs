@@ -1,0 +1,11 @@
+./test:
+итого 8
+drwxrwxr-x. 2 osboxes osboxes 4096 сен 25 19:48 dir
+-rw-r-----. 1 root    osboxes    5 сен 25 19:47 file
+-rw-------. 1 osboxes osboxes    0 сен 25 19:51 file1
+-rw-rw-rw-. 1 osboxes osboxes    0 сен 25 19:51 file2
+
+./test/dir:
+итого 4
+-rw-rw-r--. 1 osboxes osboxes 7 сен 25 19:49 new_file
+

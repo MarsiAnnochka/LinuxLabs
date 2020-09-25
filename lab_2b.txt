@@ -1,0 +1,46 @@
+  171  history
+  172  cd
+  173  mkdir test
+  174  cd test
+  175  touch file
+  176  ll
+  177  chmod 000 file
+  178  echo test > file
+  179  cat file
+  180  chmod u+w file
+  181  ll
+  182  echo test > file
+  183  cat file
+  184  chmod g+r file
+  185  ll
+  186  cat file
+  187  chmod u+r file
+  188  ls -l
+  189  cat file
+  190  mkdir dir
+  191  touch dir/new_file
+  192  echo file 2 > dir/new_file
+  193  ls -l dir
+  194  chmod u-x dir
+  195  cat dir/new_file
+  196  rm dir/new_file
+  197  chown root file
+  198  chown :root file
+  199  umask 077
+  200  touch file1
+  201  ll
+  202  umask 000
+  203  touch file2
+  204  ll
+  205  su
+  206  sudo su
+  207  history
+  208  cat test/file
+  209  sudo chmod g+r test/file
+  210  ll test
+  211  cat test/file
+  212  ls -lR > lab_2(a).txt
+  213  ls -lR > lab_2a.txt
+  214  chmod u+x test/dir
+  215  ls -lR > lab_2a.txt
+  216  history > lab_2b.txt
